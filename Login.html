@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="Login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <div class="main"> 
@@ -14,35 +15,45 @@
         </div>
         <div class="container">
 
-            <div class="card">
+            <div class="card row">
+            <div class="card-body">
             <div class="login">
-                <h2>Login to Your Account</h2>
-                <h5>Enter your username & password to login<h5>
+                <h2 class="text-center">Login to Your Account</h2>
+                <h5 class="text-center">Enter your username & password to login<h5>
             </div>
-            <form action="">
+            <form class="row">
             <div class="col-12">
-                <label for="name" class="form-label">Username</label>
+            <label for="name" class="Space">Username</label>
                 <div class="input-group">
                 <span class="input-group-text" id="inputGroupPrepend">@</span>
-                <input type="text" name="Uname" class="form-control" id="yUname"> 
+                <input type="text" name="Uname" class="form-control" id="yUname" required> 
                 </div>
             </div>
             <div class="col-12"><br>
-                <label for="password" class="form-label"> Password</label><br>
-                <input type="password" class="form-control" id="password" required>
+                    <label for="password" class="Space"> Password</label>
+                 <div class="pass-container">   
+                    <input type="password" class="form-control" id="password" name="password" required>
+                    <i class="fa-solid fa-eye-slash" id="showPassword"></i>
+                    <!-- <i class="fa-solid fa-eye-slash"></i> -->
+                </div>
             </div>
-            
-                    <input type="checkbox" name="remember" class="form-check-input"> 
-                    <label>Remember me</label><br>
+            <div class="col-12"><br>
+                <div class="form-check">
+                    <input type="checkbox"    name="remember" class="form-check-input "> 
+                    <label class="RemMe">Remember me</label>
+                </div>
+            </div>
+            <div class="col-12">
                     <button type="submit" class="btn"> Login</button>
+            </div>
             </form>
             <p class="pep">Don't have account?  
                 <a href="#"> 
                   Create an Account 
                 </a> 
             </p> 
+            </div>
         </div>
-
         </div>
         <div class="credits">
             <p>Designed by <a href="#"> 
@@ -51,5 +62,15 @@
         </div>
 
     </div>
+    <script>
+        const showPassword = document.querySelector('#showPassword');
+        const password = document.querySelector('#password');
+
+        showPassword.addEventListener("click" , function(){
+            this.classList.toggle('fa-eye');
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+        });
+    </script>
 </body>
 </html>
