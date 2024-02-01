@@ -23,7 +23,7 @@
             </div>
             <form class="row">
             <div class="col-12">
-            <label for="name" class="Space">Username</label>
+            <label for="yUname">Username</label>
                 <div class="input-group">
                 <span class="input-group-text" id="inputGroupPrepend">@</span>
                 <input type="text" name="Uname" class="form-control" id="yUname" required> 
@@ -39,8 +39,8 @@
             </div>
             <div class="col-12"><br>
                 <div class="form-check">
-                    <input type="checkbox"    name="remember" class="form-check-input "> 
-                    <label class="RemMe">Remember me</label>
+                    <input type="checkbox" name="remember" class="form-check-input " id="Rem"> 
+                    <label class="RemMe" for="Rem">Remember me</label>
                 </div>
             </div>
             <div class="col-12">
@@ -62,15 +62,6 @@
         </div>
 
     </div>
-    <script>
-        const showPassword = document.querySelector('#showPassword');
-        const password = document.querySelector('#password');
-
-        showPassword.addEventListener("click" , function(){
-            this.classList.toggle('fa-eye');
-            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-            password.setAttribute('type', type);
-        });
-    </script>
+    <script src="pass.js"></script>
 </body>
 </html>
