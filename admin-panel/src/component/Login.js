@@ -1,6 +1,6 @@
 import React from "react";
 
-const Register = () => {
+const Login = () => {
   return (
     <>
       <main>
@@ -23,56 +23,28 @@ const Register = () => {
                 <div className="card-body">
                   <div className="pt-4 pb-2">
                     <h5 className="card-title text-center pb-0 fs-4">
-                      Create an Account
+                      Login to Your Account
                     </h5>
                     <p className="text-center small">
-                      Enter your personal details to create account
+                      Enter your username & password to Login
                     </p>
                   </div>
-                  <form className="row g-3 needs-validation" noValidate>
+                  <form className="row g-3">
                     <div className="col-12">
-                      <label className="form-label">Your Name</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        id="yourName"
-                        required
-                      ></input>
-                      <div className="invalid-feedback">
-                        Please, enter your name!
-                      </div>
-                    </div>
-                    <div className="col-12">
-                      <label className="form-label">Your Email</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        id="yourEmail"
-                        required
-                      ></input>
-                      <div className="invalid-feedback">
-                        Please, enter a valid email address!
-                      </div>
-                    </div>
-                    <div className="col-12">
-                      <label className="form-label">Username</label>
+                      <label className="form-label">
+                        Username
+                      </label>
                       <div className="input-group has-validation">
-                        <span
-                          className="input-group-text"
-                          id="inputGroupPrepend"
-                        >
+                        <span className="input-group-text" id="inputGroupPrepend">
                           @
                         </span>
                         <input
                           type="text"
                           className="form-control"
-                          id="yourUserName"
+                          id="yourUsername"
                           aria-describedby="inputGroupPrepend"
                           required
                         />
-                        <div className="invalid-feedback">
-                          Please choose a username.
-                        </div>
                       </div>
                     </div>
                     <div className="col-12">
@@ -83,35 +55,26 @@ const Register = () => {
                         type="password"
                         name="password"
                         className="form-control"
-                        id="yourPass"
+                        id="yourPassword"
                         required
                       />
-                      <div className="invalid-feedback">
-                        Please choose a password.
-                      </div>
                     </div>
                     <div className="col-12">
                       <div className="form-check">
                         <input
                           type="checkbox"
                           className="form-check-input"
-                          id="acceptTerms"
-                          required
+                          id="rememberMe"
+                          value="true"
                         />
-                        <label
-                          className="form-check-label"
-                          htmlFor="acceptTerms"
-                        >
-                         I agree and accept the <a href="index.html">terms and conditions</a>
+                        <label className="form-check-label" htmlFor="rememberMe">
+                          Remember Me
                         </label>
-                        <div className="invalid-feedback">
-                            You must agree before submitting.
-                        </div>
                       </div>
                     </div>
                     <div className="col-12">
                       <button className="btn btn-primary w-100" type="submit">
-                        Register
+                        Login
                       </button>
                     </div>
                     <div className="col-12">
@@ -135,4 +98,4 @@ const Register = () => {
     </>
   );
 };
-export default Register;
+export default Login;
