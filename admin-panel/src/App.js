@@ -1,12 +1,22 @@
-import './App.css';
-import Login from './component/Login';
-import Register from './component/Register';
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Navbar from "./component/Navbar";
+import Login from "./component/Login";
+import Register from "./component/Register";
+import Error from "./component/Error";
 
 function App() {
   return (
     <>
-      <Login />
-      <Register />
+      <Routes>
+        <Route path="/" element = {<Register />} />
+        <Route path="/login" element = {<Login />} />
+        <Route path="/navbar" element = {<Navbar/>} />
+        <Route path="*" element = {<Error />} />
+      </Routes>
+
+      {/* <Login />
+      <Register /> */}
     </>
   );
 }
