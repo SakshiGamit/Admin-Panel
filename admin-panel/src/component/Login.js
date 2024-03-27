@@ -80,7 +80,7 @@ const Login = () => {
                     <div className="col-12">
                       <p className="small mb-0">
                         Don't have account?
-                        <a href="index.html"> Create an account</a>
+                        <a href="/register"> Create an account</a>
                       </p>
                     </div>
                   </form>
@@ -89,7 +89,7 @@ const Login = () => {
               {/* card ends */}
               <div className="credits">
                 Designed by
-                <a href="index.html"> NiceAdmin</a>
+                <a href="/"> NiceAdmin</a>
               </div>
             </div>
           </div>

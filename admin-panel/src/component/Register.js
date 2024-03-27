@@ -100,8 +100,8 @@ const Register = () => {
                     </div>
                     <div className="col-12">
                       <p className="small mb-0">
-                        Don't have account?
-                        <a href="index.html"> Create an account</a>
+                        Already have an account?
+                        <a href="/login"> Login</a>
                       </p>
                     </div>
                   </form>
@@ -110,7 +110,7 @@ const Register = () => {
               {/* card ends */}
               <div className="credits">
                 Designed by
-                <a href="index.html"> NiceAdmin</a>
+                <a href="/"> NiceAdmin</a>
               </div>
             </div>
           </div>

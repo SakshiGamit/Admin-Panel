@@ -30,3 +30,32 @@ a{
   color: #012970;
   font-family: "Poppins";
 }
+.error_404{
+  font-family: "Nunito", sans-serif;
+}
+.error_404 h1{
+  font-size: 180px;
+  font-weight: 700;
+  color: #4154f1;
+  margin-bottom: 0;
+  line-height: 150px;
+}
+.error_404 h2{
+  font-size: 24px;
+  font-weight: 700;
+  color: #012970;
+  margin-bottom: 30px;
+}
+.error_404 .btn{
+  background: #51678f;
+  color: #fff;
+  padding: 8px 30px;
+} 
+.error_404 .btn:hover{
+  background-color: #3f506e;
+}
+@media (min-width: 992px){
+  .error_404 img{
+    max-width: 50%;
+  }
+}
