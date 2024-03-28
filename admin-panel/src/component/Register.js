@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   return (
@@ -89,7 +90,7 @@ const Register = () => {
                           className="form-check-label"
                           htmlFor="acceptTerms"
                         >
-                         I agree and accept the <a href="index.html">terms and conditions</a>
+                          I agree and accept the <a href="index.html">terms and conditions</a>
                         </label>
                       </div>
                     </div>
@@ -101,7 +102,7 @@ const Register = () => {
                     <div className="col-12">
                       <p className="small mb-0">
                         Already have an account?
-                        <a href="/login"> Login</a>
+                        <Link to="/login"> Login</Link>
                       </p>
                     </div>
                   </form>
