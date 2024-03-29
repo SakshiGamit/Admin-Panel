@@ -6,20 +6,15 @@ const Navbar = () => {
     <>
       <header
         id="header"
-        className="header fixed_top d-flex align-items-center"
-      >
+        className="header fixed_top d-flex align-items-center">
         <div className="d-flex align-items-center justify-content-between">
-          <NavLink
-            to="/"
-            className="logo d-flex align-items-center"
-          >
+          <NavLink to="/" className="logo d-flex align-items-center">
             <figure className="m-0">
               <img src={require("../images/logo.png")} alt="logo"></img>
             </figure>
             <span className="d-none d-lg-block">NiceAdmin</span>
           </NavLink>
-          {/* <i class="fa-solid fa-bars toggle-sidebar-btn"></i> */}
-          <i class="bi bi-list toggle-sidebar-btn"></i>
+          <i cl ass="bi bi-list toggle-sidebar-btn"></i>
         </div>
         {/* logo ends */}
         <div className="search-bar">
@@ -38,7 +33,7 @@ const Navbar = () => {
         {/* search ends */}
       </header>
 
-      <aside id="sidebar" className="sidebar">
+      <aside id="sidebar" className="sidebar ">
         <ul className="sidebar-nav" id="sidebar-nav">
           <li className="nav-item">
             <NavLink className="nav-link" to="/">
@@ -125,7 +120,6 @@ const Navbar = () => {
                   <span>Chart.js</span>
                 </NavLink>
               </li>
-
             </ul>
           </li>
           {/* End Charts Nav */}
@@ -133,43 +127,43 @@ const Navbar = () => {
 
           <li className="nav-item">
             <NavLink to="*" className="nav-link collapsed">
-            <i className="bi bi-person"></i>
-            <span>Profile</span>
+              <i className="bi bi-person"></i>
+              <span>Profile</span>
             </NavLink>
           </li>
           {/* End Profile Page Nav */}
           <li className="nav-item">
             <NavLink to="/register" className="nav-link collapsed">
-            <i className="bi bi-card-list"></i>
-            <span>Register</span>
+              <i className="bi bi-card-list"></i>
+              <span>Register</span>
             </NavLink>
           </li>
           {/* End Register Page Nav */}
           <li className="nav-item">
             <NavLink to="/login" className="nav-link collapsed">
-            <i className="bi bi-box-arrow-in-right"></i>
-            <span>Login</span>
+              <i className="bi bi-box-arrow-in-right"></i>
+              <span>Login</span>
             </NavLink>
           </li>
           {/* End Login Page Nav */}
           <li className="nav-item">
             <NavLink to="*" className="nav-link collapsed">
-            <i className="bi bi-envelope"></i>
-            <span>Contact</span>
+              <i className="bi bi-envelope"></i>
+              <span>Contact</span>
             </NavLink>
           </li>
           {/* End Contact Page Nav */}
           <li className="nav-item">
             <NavLink to="*" className="nav-link collapsed">
-            <i className="bi bi-question-circle"></i>
-            <span>F.A.Q</span>
+              <i className="bi bi-question-circle"></i>
+              <span>F.A.Q</span>
             </NavLink>
           </li>
           {/* End F.A.Q Page Nav */}
           <li className="nav-item">
             <NavLink to="*" className="nav-link collapsed">
-            <i className="bi bi-dash-circle"></i>
-            <span>Error 404</span>
+              <i className="bi bi-dash-circle"></i>
+              <span>Error 404</span>
             </NavLink>
           </li>
           {/* End Error 404 Page Nav */}
