@@ -6,72 +6,72 @@
   margin-right: 6px;
   vertical-align: middle;
 }
-a{
+a {
   text-decoration: none;
 }
-.logo span{
+.logo span {
   font-size: 26px;
   font-weight: 700;
   color: #012970;
   font-family: "Nunito", sans-serif;
 }
-.card{
+.card {
   border: none;
   border-radius: 5px;
   background-color: #ffffff;
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
 }
-.card-body{
+.card-body {
   padding: 0 20px 20px 20px;
 }
-.card-title{
+.card-title {
   padding-top: 20px;
   font-weight: 500;
   color: #012970;
   font-family: "Poppins";
 }
-.error_404{
+.error_404 {
   font-family: "Nunito", sans-serif;
 }
-.error_404 h1{
+.error_404 h1 {
   font-size: 180px;
   font-weight: 700;
   color: #4154f1;
   margin-bottom: 0;
   line-height: 150px;
 }
-.error_404 h2{
+.error_404 h2 {
   font-size: 24px;
   font-weight: 700;
   color: #012970;
   margin-bottom: 30px;
 }
-.error_404 .btn{
+.error_404 .btn {
   background: #51678f;
   color: #fff;
   padding: 8px 30px;
-} 
-.error_404 .btn:hover{
+}
+.error_404 .btn:hover {
   background-color: #3f506e;
 }
-@media (min-width: 992px){
-  .error_404 img{
+@media (min-width: 992px) {
+  .error_404 img {
     max-width: 50%;
   }
 }
 /* navbar styling*/
-@media (min-width: 1200px){
-  .logo{
+@media (min-width: 1200px) {
+  .logo {
     width: 280px;
   }
 }
-.toggle-sidebar-btn{
+.toggle-sidebar-btn {
   font-size: 32px;
   padding-left: 10px;
   cursor: pointer;
   color: #012970;
 }
-.header{
+.header {
   transition: all 0.5s;
   z-index: 997;
   height: 60px;
@@ -79,14 +79,14 @@ a{
   background-color: #fff;
   padding-left: 20px;
 }
-.header .search-form{
+.header .search-form {
   width: 100%;
 }
-.header .search-bar{
+.header .search-bar {
   min-width: 360px;
   padding: 0 20px;
 }
-.header .search-form input{
+.header .search-form input {
   font-size: 14px;
   color: #012970;
   border: 1px solid rgba(1, 41, 112, 0.2);
@@ -95,15 +95,15 @@ a{
   transition: 0.3s;
   width: 100%;
 }
-.header .search-form button{
+.header .search-form button {
   border: 0;
   padding: 0;
   margin-left: -30px;
   background: none;
   color: #012970;
 }
-@media (max-width: 1199px){
-  .header .search-bar{
+@media (max-width: 1199px) {
+  .header .search-bar {
     position: fixed;
     top: 50px;
     left: 0;
@@ -117,7 +117,7 @@ a{
     opacity: 0;
   }
 }
-.sidebar{
+.sidebar {
   position: fixed;
   top: 60px;
   left: 0;
@@ -126,14 +126,14 @@ a{
   z-index: 996;
   transition: all 0.3s;
   padding: 20px;
-  overflow-y:auto ;
+  overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #aab7cf transparent;
   box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
   background-color: #fff;
 }
-@media (max-width: 1199px){
-  .sidebar{
+@media (max-width: 1199px) {
+  .sidebar {
     left: 0;
   }
 }
@@ -142,15 +142,15 @@ a{
     left: -300px;
   }
 } */
-.sidebar-nav{
+.sidebar-nav {
   padding: 0;
   margin: 0;
   list-style: none;
 }
-.nav-item{
+.nav-item {
   margin-bottom: 5px;
 }
-.sidebar-nav .nav-link{
+.sidebar-nav .nav-link {
   display: flex;
   align-items: center;
   font-size: 15px;
@@ -161,8 +161,48 @@ a{
   padding: 10px 15px;
   border-radius: 4px;
 }
-.sidebar-nav .nav-link i{
+.sidebar-nav .nav-link i {
   font-size: 16px;
   margin-right: 10px;
   color: #4154f1;
+}
+/* .sidebar-nav i{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+} */
+.sidebar-nav .nav-link.collapsed {
+  color: #012970;
+  background: #fff;
+}
+.sidebar-nav .nav-link.collapsed i{
+  color: #899bbd;
+}
+.nav-content {
+  padding: 5px 0 0 0;
+  margin: 0;
+  list-style: none;
+}
+.sidebar-nav .nav-content a {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #012970;
+  padding: 10px 0 10px 40px;
+  transition: 0.3s;
+}
+.sidebar-nav .nav-content i {
+  font-size: 6px;
+  margin-right: 8px;
+  line-height: 0;
+  border-radius: 50%;
+}
+
+.nav-heading{
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #899bbd;
+  font-weight: 600;
+  margin: 10px 0 5px 15px;
 }

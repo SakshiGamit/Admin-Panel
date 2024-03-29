@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -9,15 +9,15 @@ const Login = () => {
           <div className="row justify-content-center">
             <div className="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
               <div className="d-flex justify-content-center py-4">
-                <a
-                  href="index.html"
+                <NavLink
+                  to="/"
                   className="logo d-flex align-items-center  w-auto"
                 >
                   <figure className="m-0">
                     <img src={require("../images/logo.png")} alt="logo"></img>
                   </figure>
                   <span className="d-none d-lg-block">NiceAdmin</span>
-                </a>
+                </NavLink>
               </div>
               {/* logo end */}
               <div className="card mb-3">
@@ -81,7 +81,7 @@ const Login = () => {
                     <div className="col-12">
                       <p className="small mb-0">
                         Don't have account?
-                        <Link to="/register" > Create an account</Link>
+                        <NavLink to="/register" > Create an account</NavLink>
                       </p>
                     </div>
                   </form>

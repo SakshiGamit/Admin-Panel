@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Register = () => {
   return (
@@ -9,15 +9,15 @@ const Register = () => {
           <div className="row justify-content-center">
             <div className="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
               <div className="d-flex justify-content-center py-4">
-                <a
-                  href="index.html"
+                <NavLink
+                  to="/"
                   className="logo d-flex align-items-center  w-auto"
                 >
                   <figure className="m-0">
                     <img src={require("../images/logo.png")} alt="logo"></img>
                   </figure>
                   <span className="d-none d-lg-block">NiceAdmin</span>
-                </a>
+                </NavLink>
               </div>
               {/* logo end */}
               <div className="card mb-3">
@@ -90,7 +90,7 @@ const Register = () => {
                           className="form-check-label"
                           htmlFor="acceptTerms"
                         >
-                          I agree and accept the <a href="index.html">terms and conditions</a>
+                          I agree and accept the <NavLink to="/">terms and conditions</NavLink>
                         </label>
                       </div>
                     </div>
@@ -102,7 +102,7 @@ const Register = () => {
                     <div className="col-12">
                       <p className="small mb-0">
                         Already have an account?
-                        <Link to="/login"> Login</Link>
+                        <NavLink to="/login"> Login</NavLink>
                       </p>
                     </div>
                   </form>
