@@ -71,6 +71,9 @@ a {
   cursor: pointer;
   color: #012970;
 }
+.toggle-sidebar-btn:active, .toggle-sidebar-btn:focus{
+  box-shadow: none;
+}
 .header {
   transition: all 0.5s;
   z-index: 997;
@@ -102,21 +105,6 @@ a {
   background: none;
   color: #012970;
 }
-@media (max-width: 1199px) {
-  .header .search-bar {
-    position: fixed;
-    top: 50px;
-    left: 0;
-    right: 0;
-    padding: 20px;
-    box-shadow: 0px 0px 15px 0px rgba(1, 41, 112, 0.1);
-    background: white;
-    z-index: 9999;
-    transition: 0.3s;
-    visibility: hidden;
-    opacity: 0;
-  }
-}
 .sidebar {
   position: fixed;
   top: 60px;
@@ -132,16 +120,13 @@ a {
   box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
   background-color: #fff;
 }
-/* @media (max-width: 1199px) {
-  .sidebar {
-    left: 0;
-  }
+.sidebar-open {
+  left: 0;
 }
-@media (max-width: 1199px){
-  .sidebar{
-    left: -300px;
-  }
-} */
+.sidebar-closed {
+  left: -300px;
+}
+
 .sidebar-nav {
   padding: 0;
   margin: 0;
@@ -175,7 +160,7 @@ a {
   color: #012970;
   background: #fff;
 }
-.sidebar-nav .nav-link.collapsed i{
+.sidebar-nav .nav-link.collapsed i {
   color: #899bbd;
 }
 .nav-content {
@@ -198,8 +183,7 @@ a {
   line-height: 0;
   border-radius: 50%;
 }
-
-.nav-heading{
+.nav-heading {
   font-size: 11px;
   text-transform: uppercase;
   color: #899bbd;

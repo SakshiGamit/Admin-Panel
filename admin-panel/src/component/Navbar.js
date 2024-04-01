@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
   return (
     <>
       <header
@@ -15,7 +16,9 @@ const Navbar = () => {
             </figure>
             <span className="d-none d-lg-block">NiceAdmin</span>
           </NavLink>
+          <button className="btn toggle-sidebar-btn" onClick={()=> setSidebarOpen(!isSidebarOpen)}>
           <i className="bi bi-list toggle-sidebar-btn"></i>
+          </button>
         </div>
         {/* logo ends */}
         <div className="search-bar">
@@ -27,14 +30,14 @@ const Navbar = () => {
               aria-label="Search"
             ></input>
             <button type="submit" title="Search">
-              <i class="bi bi-search"></i>
+              <i className="bi bi-search"></i>
             </button>
           </form>
         </div>
         {/* search ends */}
       </header>
 
-      <aside id="sidebar" className="sidebar ">
+      <aside id="sidebar" className={`sidebar ${isSidebarOpen ? "sidebar-open" : "sidebar-closed"}`}>
         <ul className="sidebar-nav" id="sidebar-nav">
           <li className="nav-item">
             <NavLink className="nav-link" to="/">
@@ -61,7 +64,7 @@ const Navbar = () => {
             >
               <li>
                 <NavLink to="/">
-                  <i class="bi bi-circle"></i>
+                  <i className="bi bi-circle"></i>
                   <span>Form Elements</span>
                 </NavLink>
               </li>
@@ -75,7 +78,7 @@ const Navbar = () => {
               data-bs-target="#tables-nav"
               data-bs-toggle="collapse"
             >
-              <i class="bi bi-layout-text-window-reverse"></i>
+              <i className="bi bi-layout-text-window-reverse"></i>
               <span>Tables</span>
               <i className="bi bi-chevron-down ms-auto"></i>
             </NavLink>
@@ -86,13 +89,13 @@ const Navbar = () => {
             >
               <li>
                 <NavLink to="/">
-                  <i class="bi bi-circle"></i>
+                  <i className="bi bi-circle"></i>
                   <span>General Tables</span>
                 </NavLink>
               </li>
               <li>
                 <NavLink to="/">
-                  <i class="bi bi-circle"></i>
+                  <i className="bi bi-circle"></i>
                   <span>Data Tables</span>
                 </NavLink>
               </li>
@@ -106,7 +109,7 @@ const Navbar = () => {
               data-bs-target="#charts-nav"
               data-bs-toggle="collapse"
             >
-              <i class="bi bi-bar-chart"></i>
+              <i className="bi bi-bar-chart"></i>
               <span>Charts</span>
               <i className="bi bi-chevron-down ms-auto"></i>
             </NavLink>
@@ -117,7 +120,7 @@ const Navbar = () => {
             >
               <li>
                 <NavLink to="/">
-                  <i class="bi bi-circle"></i>
+                  <i className="bi bi-circle"></i>
                   <span>Chart.js</span>
                 </NavLink>
               </li>
@@ -170,6 +173,21 @@ const Navbar = () => {
           {/* End Error 404 Page Nav */}
         </ul>
       </aside>
+      <main id="main" className="main">
+        <div className="pagetitle">
+          <h1>Dashboard</h1>
+          <nav aria-label="breadcrumb">
+            <ol className="breadcrumb">
+              <li className="breadcrumb-item">
+                <a href="/">Home</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Library
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </main>
       {/* <NavLink to="/login"> Login </NavLink>
       <NavLink to="/register"> Register </NavLink> */}
     </>
