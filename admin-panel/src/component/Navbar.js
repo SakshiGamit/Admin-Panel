@@ -6,7 +6,8 @@ const Navbar = () => {
     <>
       <header
         id="header"
-        className="header fixed_top d-flex align-items-center">
+        className="header fixed_top d-flex align-items-center"
+      >
         <div className="d-flex align-items-center justify-content-between">
           <NavLink to="/" className="logo d-flex align-items-center">
             <figure className="m-0">
@@ -14,14 +15,14 @@ const Navbar = () => {
             </figure>
             <span className="d-none d-lg-block">NiceAdmin</span>
           </NavLink>
-          <i cl ass="bi bi-list toggle-sidebar-btn"></i>
+          <i className="bi bi-list toggle-sidebar-btn"></i>
         </div>
         {/* logo ends */}
         <div className="search-bar">
           <form className="search-form d-flex align-items-center">
             <input
-              class="form-control me-2"
-              type="search"
+              className="form-control me-2"
+              type="text"
               placeholder="Search"
               aria-label="Search"
             ></input>
@@ -37,7 +38,7 @@ const Navbar = () => {
         <ul className="sidebar-nav" id="sidebar-nav">
           <li className="nav-item">
             <NavLink className="nav-link" to="/">
-              <i class="bi bi-grid"></i>
+              <i className="bi bi-grid"></i>
               <span>Dashboard</span>
             </NavLink>
           </li>
