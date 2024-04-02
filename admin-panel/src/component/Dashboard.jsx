@@ -4,8 +4,6 @@ import React from "react";
 const Dashboard = () => {
   return (
     <>
-      {/* <Navbar></Navbar> */}
-      <div></div>
     </>
   );   
 };
