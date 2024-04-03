@@ -1,18 +1,18 @@
 import { NavLink } from "react-router-dom";
-import "./sidebar.css"
+import "./sidebar.css";
+import SidebarItem from "../data/SidebarItem";
 
-const Sidebar = ({ isSidebarOpen }) => {
+const Sidebar = () => {
+  const routeMap = {
+    Register: "/register",
+    Login: "/login",
+  };
   return (
     <>
-      <aside
-        id="sidebar"
-        className={`sidebar ${
-          isSidebarOpen ? "sidebar-open" : "sidebar-closed"
-        }`}
-      >
+      <aside id="sidebar" className="sidebar">
         <ul className="sidebar-nav" id="sidebar-nav">
           <li className="nav-item">
-            <NavLink className="nav-link" to="/">
+            <NavLink className="nav-link" to="/*">
               <i className="bi bi-grid"></i>
               <span>Dashboard</span>
             </NavLink>
@@ -101,48 +101,17 @@ const Sidebar = ({ isSidebarOpen }) => {
           {/* End Charts Nav */}
           <li className="nav-heading">Pages</li>
 
-          <li className="nav-item">
-            <NavLink to="*" className="nav-link collapsed">
-              <i className="bi bi-person"></i>
-              <span>Profile</span>
-            </NavLink>
-          </li>
-          {/* End Profile Page Nav */}
-          <li className="nav-item">
-            <NavLink to="/register" className="nav-link collapsed">
-              <i className="bi bi-card-list"></i>
-              <span>Register</span>
-            </NavLink>
-          </li>
-          {/* End Register Page Nav */}
-          <li className="nav-item">
-            <NavLink to="/login" className="nav-link collapsed">
-              <i className="bi bi-box-arrow-in-right"></i>
-              <span>Login</span>
-            </NavLink>
-          </li>
-          {/* End Login Page Nav */}
-          <li className="nav-item">
-            <NavLink to="*" className="nav-link collapsed">
-              <i className="bi bi-envelope"></i>
-              <span>Contact</span>
-            </NavLink>
-          </li>
-          {/* End Contact Page Nav */}
-          <li className="nav-item">
-            <NavLink to="*" className="nav-link collapsed">
-              <i className="bi bi-question-circle"></i>
-              <span>F.A.Q</span>
-            </NavLink>
-          </li>
-          {/* End F.A.Q Page Nav */}
-          <li className="nav-item">
-            <NavLink to="*" className="nav-link collapsed">
-              <i className="bi bi-dash-circle"></i>
-              <span>Error 404</span>
-            </NavLink>
-          </li>
-          {/* End Error 404 Page Nav */}
+          {SidebarItem.map((nav) => {
+            const toRoute = routeMap[nav.name] || "*";
+            return (
+              <li className="nav-item" key={nav.id}>
+                <NavLink to={toRoute} className="nav-link collapsed">
+                  <i className={nav.icon}></i>
+                  <span>{nav.name}</span>
+                </NavLink>
+              </li>
+            );
+          })}
         </ul>
       </aside>
     </>

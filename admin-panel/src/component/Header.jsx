@@ -1,12 +1,16 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
 import "./header.css";
 
-const Header = ({ setSidebarOpen, isSidebarOpen }) => {
+const Header = () => {
+  const handleToggleSidebar = ()=>{
+    document.body.classList.toggle("toggle-sidebar");
+  }
   return (
     <>
       <header
         id="header"
-        className="header fixed_top d-flex align-items-center"
+        className="header fixed-top d-flex align-items-center"
       >
         <div className="d-flex align-items-center justify-content-between">
           <NavLink to="/" className="logo d-flex align-items-center">
@@ -16,8 +20,8 @@ const Header = ({ setSidebarOpen, isSidebarOpen }) => {
             <span className="d-none d-lg-block">NiceAdmin</span>
           </NavLink>
           <button
-            className="btn toggle-sidebar-btn"
-            onClick={() => setSidebarOpen(!isSidebarOpen)}
+            className="btn p-0"
+            onClick={handleToggleSidebar}
           >
             <i className="bi bi-list toggle-sidebar-btn"></i>
           </button>
@@ -26,8 +30,8 @@ const Header = ({ setSidebarOpen, isSidebarOpen }) => {
         <div className="search-bar">
           <form className="search-form d-flex align-items-center">
             <input
-              className="form-control me-2"
               type="text"
+              name="query"
               placeholder="Search"
               aria-label="Search"
             ></input>
@@ -37,8 +41,15 @@ const Header = ({ setSidebarOpen, isSidebarOpen }) => {
           </form>
         </div>
         {/* search ends */}
+        {/* nav starts */}
         <nav className="header-nav ms-auto">
           <ul className="d-flex align-items-center">
+            <li className="nav-item d-block d-lg-none">
+              <button className="btn p-0 nav-link nav-icon">
+              <i className="bi bi-search"></i>
+              </button>
+            </li>
+            {/* end search icon */}
             <li className="nav-item">
               <a className="nav-link nav-icon" href="/">
                 <i className="bi bi-bell"></i>

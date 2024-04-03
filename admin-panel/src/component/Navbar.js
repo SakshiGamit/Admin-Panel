@@ -1,14 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 // import { NavLink } from "react-router-dom";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 
 const Navbar = () => {
-  const [isSidebarOpen, setSidebarOpen] = useState(false);
   return (
     <>
-      <Header setSidebarOpen={setSidebarOpen} isSidebarOpen={isSidebarOpen} />
-      <Sidebar isSidebarOpen={isSidebarOpen} />
+      <Header />
+      <Sidebar />
       {/* passing the information down in props to the component */}
     </>
   );
