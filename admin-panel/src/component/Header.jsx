@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./header.css";
 
 const Header = () => {
-  const handleToggleSidebar = ()=>{
+  const handleToggleSidebar = () => {
     document.body.classList.toggle("toggle-sidebar");
-  }
+  };
+
+  const [isSearchbarAcive, setSearchbarAcive] = useState(false);
+
   return (
     <>
       <header
@@ -19,15 +22,14 @@ const Header = () => {
             </figure>
             <span className="d-none d-lg-block">NiceAdmin</span>
           </NavLink>
-          <button
-            className="btn p-0"
-            onClick={handleToggleSidebar}
-          >
+          <button className="btn p-0" onClick={handleToggleSidebar}>
             <i className="bi bi-list toggle-sidebar-btn"></i>
           </button>
         </div>
         {/* logo ends */}
-        <div className="search-bar">
+        <div
+          className={`search-bar ${isSearchbarAcive ? "search-bar-show" : ""}`}
+        >
           <form className="search-form d-flex align-items-center">
             <input
               type="text"
@@ -45,8 +47,13 @@ const Header = () => {
         <nav className="header-nav ms-auto">
           <ul className="d-flex align-items-center">
             <li className="nav-item d-block d-lg-none">
-              <button className="btn p-0 nav-link nav-icon">
-              <i className="bi bi-search"></i>
+              <button
+                className="btn p-0 nav-link nav-icon"
+                onClick={() => {
+                  setSearchbarAcive(!isSearchbarAcive);
+                }}
+              >
+                <i className="bi bi-search"></i>
               </button>
             </li>
             {/* end search icon */}
@@ -65,11 +72,16 @@ const Header = () => {
             </li>
             {/* messages ends */}
             <li className="nav-item pe-3">
-              <a className="nav-link nav-profile d-flex align-items-center pe-0" href="/">
-                <img src={require("../images/profile-img.jpg")} alt="profile" className="rounded-circle"></img>
-                <span className="d-none d-md-block ps-2">
-                    K. Anderson
-                </span>
+              <a
+                className="nav-link nav-profile d-flex align-items-center pe-0"
+                href="/"
+              >
+                <img
+                  src={require("../images/profile-img.jpg")}
+                  alt="profile"
+                  className="rounded-circle"
+                ></img>
+                <span className="d-none d-md-block ps-2">K. Anderson</span>
               </a>
             </li>
             {/* profile ends */}

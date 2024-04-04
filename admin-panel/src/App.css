@@ -4,6 +4,10 @@
   --secondary: #4154f1;
   --grey: #899bbd;
   --bgColor: #f6f9ff;
+  --green: #2eca6a;
+  --lightGreen:#e0f8e9;
+  --red:#ff771d;
+  --lightRed: #ffecdf;
 }
 .logo {
   line-height: 1;
