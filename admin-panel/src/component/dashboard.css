@@ -1,23 +1,23 @@
 /* Filter dropdown */
-.dashboard .filter{
+.filter{
     position: absolute;
     right: 0px;
     top: 15px;
 }
-.dashboard .filter .icon{
+.filter .icon{
     color: #aab7cf;
     padding-right: 20px;
     padding-bottom: 5px;
     transition: 0.3s;
     font-size: 16px;
 }
-.dashboard .filter .icon:hover{
+.filter .icon:hover{
     color: var(--primary);
 }
-.dashboard .filter .dropdown-header{
+.filter .dropdown-header{
     padding: 8px 15px;
 }
-.dashboard .filter .dropdown-header h6{
+.filter .dropdown-header h6{
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 600;
@@ -26,6 +26,6 @@
     margin-bottom: 0;
     padding: 0;
 }
-.dashboard .filter .dropdown-item{
+.filter .dropdown-item{
     padding: 8px 15px;
 }

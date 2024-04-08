@@ -1,24 +1,23 @@
 import React, { useState } from "react";
 import CardFilter from "./CardFilter";
-import ReportCharts from "./ReportCharts";
-import "./dashboard.css";
+import BudgetChart from "./BudgetChart";
 
-function Report() {
+function BudgetReport() {
   const [filter, setFilter] = useState("Today");
   const handleFilterChange = (filter) => {
     setFilter(filter);
   };
-
   return (
     <div className="card">
-      <CardFilter filterChange={handleFilterChange} />
-      <div className="card-body">
+      <CardFilter handleFilterChange={handleFilterChange} />
+      <div className="card-body pb-0">
         <h5 className="card-title">
-          Reports <span>/{filter}</span>
+          Budget Report<span> | {filter}</span>
         </h5>
-        <ReportCharts />
+        <BudgetChart />
       </div>
     </div>
   );
 }
-export default Report;
+
+export default BudgetReport;

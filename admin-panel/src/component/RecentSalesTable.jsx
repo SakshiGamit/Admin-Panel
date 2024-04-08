@@ -35,11 +35,11 @@ function RecentSalesTable({ items }) {
               <>
                 <tr key={item.id}>
                   <th scope="row">
-                    <a href="#">{item.number}</a>
+                    <a href="/">{item.number}</a>
                   </th>
                   <td>{item.customer}</td>
                   <td>
-                    <a href="#" className="text-primary">
+                    <a href="/" className="text-primary">
                       {item.product}
                     </a>
                   </td>

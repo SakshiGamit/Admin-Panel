@@ -26,7 +26,7 @@ const Sidebar = () => {
               data-bs-toggle="collapse"
             >
               <i className="bi bi-journal-text"></i>
-              <span>Forms</span>
+              <span>Customer</span>
               <i className="bi bi-chevron-down ms-auto"></i>
             </NavLink>
             <ul
@@ -37,7 +37,7 @@ const Sidebar = () => {
               <li>
                 <NavLink to="/">
                   <i className="bi bi-circle"></i>
-                  <span>Form Elements</span>
+                  <span>Profile</span>
                 </NavLink>
               </li>
             </ul>
@@ -51,7 +51,7 @@ const Sidebar = () => {
               data-bs-toggle="collapse"
             >
               <i className="bi bi-layout-text-window-reverse"></i>
-              <span>Tables</span>
+              <span>Sales</span>
               <i className="bi bi-chevron-down ms-auto"></i>
             </NavLink>
             <ul
@@ -60,15 +60,15 @@ const Sidebar = () => {
               data-bs-parent="#sidebar-nav"
             >
               <li>
-                <NavLink to="/">
+                <NavLink to="/recentSales">
                   <i className="bi bi-circle"></i>
-                  <span>General Tables</span>
+                  <span>Recent Sales</span>
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/">
+                <NavLink to="/topSelling">
                   <i className="bi bi-circle"></i>
-                  <span>Data Tables</span>
+                  <span>Top Selling</span>
                 </NavLink>
               </li>
             </ul>
@@ -82,7 +82,7 @@ const Sidebar = () => {
               data-bs-toggle="collapse"
             >
               <i className="bi bi-bar-chart"></i>
-              <span>Charts</span>
+              <span>Reports</span>
               <i className="bi bi-chevron-down ms-auto"></i>
             </NavLink>
             <ul
@@ -91,9 +91,21 @@ const Sidebar = () => {
               data-bs-parent="#sidebar-nav"
             >
               <li>
-                <NavLink to="/">
+                <NavLink to="/report">
                   <i className="bi bi-circle"></i>
-                  <span>Chart.js</span>
+                  <span>Report Chart</span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/budgetreport">
+                  <i className="bi bi-circle"></i>
+                  <span>Budget Chart</span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/webtraffic">
+                  <i className="bi bi-circle"></i>
+                  <span>Website Traffic Chart</span>
                 </NavLink>
               </li>
             </ul>

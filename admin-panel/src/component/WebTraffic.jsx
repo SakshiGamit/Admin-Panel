@@ -1,24 +1,22 @@
 import React, { useState } from "react";
+import WebTrafficChart from "./WebTrafficChart";
 import CardFilter from "./CardFilter";
-import ReportCharts from "./ReportCharts";
-import "./dashboard.css";
 
-function Report() {
+function WebTraffic() {
   const [filter, setFilter] = useState("Today");
   const handleFilterChange = (filter) => {
     setFilter(filter);
   };
-
   return (
     <div className="card">
       <CardFilter filterChange={handleFilterChange} />
-      <div className="card-body">
+      <div className="card-body pb-0">
         <h5 className="card-title">
-          Reports <span>/{filter}</span>
+        Website Traffic <span>| {filter}</span>
         </h5>
-        <ReportCharts />
+        <WebTrafficChart />
       </div>
     </div>
   );
 }
-export default Report;
+export default WebTraffic;

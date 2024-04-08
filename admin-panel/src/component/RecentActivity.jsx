@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import "./recentSales.css";
+import "./recentActivity.css";
 import CardFilter from "./CardFilter";
-import RecentSalesTable from "./RecentSalesTable";
+import RecentActivityItem from "./RecentActivityItem";
 
-function RecentSales() {
+function RecentActivity() {
   const [items, setItems] = useState([]);
   const [filter, setFilter] = useState("Today");
   const handleFilterChange = (filter) => {
@@ -11,7 +11,7 @@ function RecentSales() {
   };
 
   const fetchData = () => {
-    fetch("http://localhost:4000/recentsales")
+    fetch("http://localhost:4000/recentactiviy")
       .then((res) => res.json())
       .then((data) => {
         setItems(data);
@@ -22,16 +22,24 @@ function RecentSales() {
   useEffect(() => {
     fetchData();
   }, []);
+
   return (
-    <div className="card recent-sales overflow-auto">
-      <CardFilter filterChange={handleFilterChange} />
+    <div className="card info-card sales-card">
+      <CardFilter handleFilterChange={handleFilterChange} />
       <div className="card-body">
         <h5 className="card-title">
-          Recent Sales <span> | {filter}</span>
+          Recent Activity<span> | {filter}</span>
         </h5>
-        <RecentSalesTable items={items} />
+
+        <div className="activity">
+          {items &&
+            items.length > 0 &&
+            items.map((item) => (
+              <RecentActivityItem key={item._id} item={item} />
+            ))}
+        </div>
       </div>
     </div>
   );
 }
-export default RecentSales;
+export default RecentActivity;
