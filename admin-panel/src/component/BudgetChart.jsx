@@ -15,23 +15,23 @@ function BudgetChart() {
             max: 6500,
           },
           {
-            name: "Administration",
+            name: "Ad",
             max: 16000,
           },
           {
-            name: "Information Technology",
+            name: "IT",
             max: 30000,
           },
           {
-            name: "Customer Support",
+            name: "CS",
             max: 38000,
           },
           {
-            name: "Development",
+            name: "Dev.",
             max: 52000,
           },
           {
-            name: "Marketing",
+            name: "Mktg",
             max: 25000,
           },
         ],

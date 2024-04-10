@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./recentActivity.css";
-import CardFilter from "./CardFilter";
 import RecentActivityItem from "./RecentActivityItem";
+import CardFilter from "./CardFilter";
 
 function RecentActivity() {
   const [items, setItems] = useState([]);
@@ -25,7 +25,7 @@ function RecentActivity() {
 
   return (
     <div className="card info-card sales-card">
-      <CardFilter handleFilterChange={handleFilterChange} />
+      <CardFilter filterChange={handleFilterChange} />
       <div className="card-body">
         <h5 className="card-title">
           Recent Activity<span> | {filter}</span>

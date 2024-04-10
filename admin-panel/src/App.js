@@ -12,19 +12,18 @@ import WebTraffic from "./component/WebTraffic";
 
 function App() {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/recentsales" element={<RecentSales />} />
-        <Route path="/topselling" element={<TopSelling />} />
-        <Route path="/report" element={<Report />} />
-        <Route path="/budgetreport" element={<BudgetReport />} />
-        <Route path="/webtraffic" element={<WebTraffic />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
-    </>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/Home" element={<Home />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/recentsales" element={<RecentSales />} />
+      <Route path="/topselling" element={<TopSelling />} />
+      <Route path="/report" element={<Report />} />
+      <Route path="/budgetreport" element={<BudgetReport />} />
+      <Route path="/webtraffic" element={<WebTraffic />} />
+      <Route path="*" element={<Error />} />
+    </Routes>
   );
 }
 export default App;

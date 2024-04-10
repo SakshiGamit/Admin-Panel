@@ -2,7 +2,6 @@ import React from "react";
 import "./topSelling.css";
 
 function TopSellingItem({ item }) {
-    console.log(item);
   return(
     <tr>
         <th scope="row">
@@ -10,7 +9,7 @@ function TopSellingItem({ item }) {
            <img src={item?.preview}  alt="" />
         </th>
         <td>
-            <a href="/" className="text-primary fw-bold">
+            <a href="/Home" className="text-primary fw-bold">
                 {item.name}
             </a>
         </td>

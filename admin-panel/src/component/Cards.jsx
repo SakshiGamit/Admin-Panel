@@ -2,15 +2,14 @@ import React, { useState } from "react";
 import "./card.css";
 import CardFilter from "./CardFilter";
 
-function Cards({ card }) {
+function Cards({ card }) { 
   const [filter, setFilter] = useState("Today");
   const handleFilterChange = (filter) => {
     setFilter(filter);
   };
-
   return (
     <div className="col-xxl-4 col-md-6">
-      <div className="card info-card sales-card">
+      <div className={`card info-card ${card.name}-card`}>
         <CardFilter filterChange={handleFilterChange} />
         <div className="card-body">
           <h5 className="card-title">
@@ -22,7 +21,7 @@ function Cards({ card }) {
               <i className={card.icon}></i>
             </div>
             <div className="ps-3">
-              <h6>
+              <h6 id="revCard">
                 {card.name === "Revenue"
                   ? "$" + card.amount.toLocaleString("en-US")
                   : card.amount.toLocaleString("en-US")}

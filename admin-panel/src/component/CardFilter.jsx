@@ -1,9 +1,10 @@
 import React from "react";
+import "./cardFilter.css";
 
 function CardFilter({ filterChange }) {
   return (
     <div className="filter">
-      <a className="icon" href="/" data-bs-toggle="dropdown">
+      <a className="icon" href="/Home" data-bs-toggle="dropdown">
         <i className="bi bi-three-dots"></i>
       </a>
       <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow">

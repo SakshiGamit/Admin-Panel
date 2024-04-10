@@ -10,13 +10,13 @@ const Register = () => {
             <div className="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
               <div className="d-flex justify-content-center py-4">
                 <NavLink
-                  to="/"
+                  to="/Home"
                   className="logo d-flex align-items-center  w-auto"
                 >
                   <figure className="m-0">
                     <img src={require("../images/logo.png")} alt="logo"></img>
                   </figure>
-                  <span className="d-none d-lg-block">NiceAdmin</span>
+                  <span className="d-none d-lg-block">Logicare</span>
                 </NavLink>
               </div>
               {/* logo end */}
@@ -90,7 +90,7 @@ const Register = () => {
                           className="form-check-label"
                           htmlFor="acceptTerms"
                         >
-                          I agree and accept the <NavLink to="/">terms and conditions</NavLink>
+                          I agree and accept the <NavLink to="/Home">terms and conditions</NavLink>
                         </label>
                       </div>
                     </div>
@@ -111,7 +111,7 @@ const Register = () => {
               {/* card ends */}
               <div className="credits">
                 Designed by
-                <a href="/"> NiceAdmin</a>
+                <a href="/Home"> Logicare</a>
               </div>
             </div>
           </div>

@@ -16,7 +16,7 @@ const Header = () => {
         className="header fixed-top d-flex align-items-center"
       >
         <div className="d-flex align-items-center justify-content-between">
-          <NavLink to="/" className="logo d-flex align-items-center">
+          <NavLink to="/Home" className="logo d-flex align-items-center">
             <figure className="m-0">
               <img src={require("../images/logo.png")} alt="logo"></img>
             </figure>
@@ -58,14 +58,14 @@ const Header = () => {
             </li>
             {/* end search icon */}
             <li className="nav-item">
-              <a className="nav-link nav-icon" href="/">
+              <a className="nav-link nav-icon" href="/Home">
                 <i className="bi bi-bell"></i>
                 <span className="badge badge-number bg-primary">4</span>
               </a>
             </li>
             {/* notification ends */}
             <li className="nav-item">
-              <a className="nav-link nav-icon" href="/">
+              <a className="nav-link nav-icon" href="/Home">
                 <i className="bi bi-chat-left-text"></i>
                 <span className="badge badge-number bg-success ">3</span>
               </a>
@@ -74,7 +74,7 @@ const Header = () => {
             <li className="nav-item pe-3">
               <a
                 className="nav-link nav-profile d-flex align-items-center pe-0"
-                href="/"
+                href="/Home"
               >
                 <img
                   src={require("../images/profile-img.jpg")}

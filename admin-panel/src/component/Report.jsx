@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import CardFilter from "./CardFilter";
 import ReportCharts from "./ReportCharts";
-import "./dashboard.css";
 
 function Report() {
   const [filter, setFilter] = useState("Today");

@@ -21,7 +21,7 @@ const Sidebar = () => {
           <li className="nav-item">
             <NavLink
               className="nav-link collapsed"
-              to="/"
+              to="/Home"
               data-bs-target="#forms-nav"
               data-bs-toggle="collapse"
             >
@@ -35,7 +35,7 @@ const Sidebar = () => {
               data-bs-parent="#sidebar-nav"
             >
               <li>
-                <NavLink to="/">
+                <NavLink to="/Home">
                   <i className="bi bi-circle"></i>
                   <span>Profile</span>
                 </NavLink>
@@ -46,7 +46,7 @@ const Sidebar = () => {
           <li className="nav-item">
             <NavLink
               className="nav-link collapsed"
-              to="/"
+              to="/Home"
               data-bs-target="#tables-nav"
               data-bs-toggle="collapse"
             >
@@ -77,7 +77,7 @@ const Sidebar = () => {
           <li className="nav-item">
             <NavLink
               className="nav-link collapsed"
-              to="/"
+              to="/Home"
               data-bs-target="#charts-nav"
               data-bs-toggle="collapse"
             >

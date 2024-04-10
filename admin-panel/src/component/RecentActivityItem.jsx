@@ -1,8 +1,6 @@
 import React from "react";
 
 function RecentActivityItem({ item }) {
-    console.log("recent activity : ", item);
-
     const startIndex = item.content.indexOf(item.highlight) + item.highlight.length;
     const slicedContent = item.content.slice(startIndex, -1);
 
@@ -17,7 +15,7 @@ function RecentActivityItem({ item }) {
             ) : (
                 <div className="activity-content">
                     {item.content.substring(0, item.content.indexOf(item.highlight))}
-                    <a href="/" className="fw-bold text-dark">
+                    <a href="/Home" className="fw-bold text-dark">
                         {item.highlight}
                     </a>
                     {/* {item.content.slice(

@@ -10,13 +10,13 @@ const Login = () => {
             <div className="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
               <div className="d-flex justify-content-center py-4">
                 <NavLink
-                  to="/"
+                  to="/Home"
                   className="logo d-flex align-items-center  w-auto"
                 >
                   <figure className="m-0">
                     <img src={require("../images/logo.png")} alt="logo"></img>
                   </figure>
-                  <span className="d-none d-lg-block">NiceAdmin</span>
+                  <span className="d-none d-lg-block">LogiCare</span>
                 </NavLink>
               </div>
               {/* logo end */}
@@ -42,6 +42,7 @@ const Login = () => {
                         <input
                           type="text"
                           className="form-control"
+                          value="AstoLogiCare"
                           id="yourUsername"
                           aria-describedby="inputGroupPrepend"
                           required
@@ -55,6 +56,7 @@ const Login = () => {
                       <input
                         type="password"
                         name="password"
+                        value="AstoLogiCare"
                         className="form-control"
                         id="yourPassword"
                         required
@@ -74,9 +76,11 @@ const Login = () => {
                       </div>
                     </div>
                     <div className="col-12">
+                    <NavLink to="/Home">
                       <button className="btn btn-primary w-100" type="submit">
                         Login
                       </button>
+                      </NavLink>
                     </div>
                     <div className="col-12">
                       <p className="small mb-0">
@@ -90,7 +94,7 @@ const Login = () => {
               {/* card ends */}
               <div className="credits">
                 Designed by
-                <a href="/"> NiceAdmin</a>
+                <a href="/Home"> LogiCare</a>
               </div>
             </div>
           </div>

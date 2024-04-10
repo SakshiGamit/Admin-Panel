@@ -101,24 +101,20 @@
   }
 }
 @media (min-width: 1200px) {
-  .sidebar {
-    left: -300px;
-  }
-}
-@media (min-width: 1200px) {
-  .toggle-sidebar .sidebar {
-    left: 0;
-  }
-}
-@media (min-width: 1200px) {
   #main,
   #footer {
-    margin-left: 0;
+    margin-left: 300px;
+  }
+  .sidebar {
+    left: 0px;
   }
 }
 @media (min-width: 1200px){
   .toggle-sidebar #main,
   .toggle-sidebar #footer{
-    margin-left: 300px;
+    margin-left: 0;
+  }
+  .toggle-sidebar .sidebar {
+    left: -300px;
   }
 }
