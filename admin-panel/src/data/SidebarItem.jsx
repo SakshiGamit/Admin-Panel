@@ -6,13 +6,13 @@ const SidebarItem = [
   },
   {
     id: 2,
-    name: "Register",
-    icon: "bi-card-list",
+    name: "Login",
+    icon: "bi bi-box-arrow-in-right",
   },
   {
     id: 3,
-    name: "Login",
-    icon: "bi bi-box-arrow-in-right",
+    name: "Register",
+    icon: "bi-card-list",
   },
   {
     id: 4,
@@ -22,7 +22,7 @@ const SidebarItem = [
 
   {
     id: 5,
-    name: "F.A.Q",
+    name: "FAQ",
     icon: "bi bi-question-circle",
   },
   {

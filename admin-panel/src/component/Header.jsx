@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./header.css";
+import "./headerNav.css";
+import NavNotification from "./NavNotification";
+import NavMsg from "./NavMsg";
+import NavProfile from "./NavProfile";
+import NavSearch from "./NavSearch";
 
 const Header = () => {
   const handleToggleSidebar = () => {
@@ -8,6 +13,9 @@ const Header = () => {
   };
 
   const [isSearchbarAcive, setSearchbarAcive] = useState(false);
+  const toggleSearchbar = () => {
+    setSearchbarAcive(!isSearchbarAcive);
+  }
 
   return (
     <>
@@ -46,45 +54,10 @@ const Header = () => {
         {/* nav starts */}
         <nav className="header-nav ms-auto">
           <ul className="d-flex align-items-center">
-            <li className="nav-item d-block d-lg-none">
-              <button
-                className="btn p-0 nav-link nav-icon"
-                onClick={() => {
-                  setSearchbarAcive(!isSearchbarAcive);
-                }}
-              >
-                <i className="bi bi-search"></i>
-              </button>
-            </li>
-            {/* end search icon */}
-            <li className="nav-item">
-              <a className="nav-link nav-icon" href="/Home">
-                <i className="bi bi-bell"></i>
-                <span className="badge badge-number bg-primary">4</span>
-              </a>
-            </li>
-            {/* notification ends */}
-            <li className="nav-item">
-              <a className="nav-link nav-icon" href="/Home">
-                <i className="bi bi-chat-left-text"></i>
-                <span className="badge badge-number bg-success ">3</span>
-              </a>
-            </li>
-            {/* messages ends */}
-            <li className="nav-item pe-3">
-              <a
-                className="nav-link nav-profile d-flex align-items-center pe-0"
-                href="/Home"
-              >
-                <img
-                  src={require("../images/profile-img.jpg")}
-                  alt="profile"
-                  className="rounded-circle"
-                ></img>
-                <span className="d-none d-md-block ps-2">K. Anderson</span>
-              </a>
-            </li>
-            {/* profile ends */}
+            <NavSearch onClick={toggleSearchbar} />
+            <NavNotification />
+            <NavMsg />
+            <NavProfile />
           </ul>
         </nav>
       </header>

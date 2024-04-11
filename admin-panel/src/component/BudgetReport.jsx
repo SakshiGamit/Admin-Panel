@@ -15,13 +15,6 @@ function BudgetReport() {
           Budget Report<span> | {filter}</span>
         </h5>
         <BudgetChart />
-        <div id="abbri">
-          <h6>Mktg : Marketing</h6>
-          <h6>Dev. : Development</h6>
-          <h6>CS : Customer Service</h6>
-          <h6>IT : Information Technology</h6>
-          <h6>Ad : Administration</h6>
-        </div>
       </div>
     </div>
   );

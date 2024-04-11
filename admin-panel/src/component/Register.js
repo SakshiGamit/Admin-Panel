@@ -90,7 +90,7 @@ const Register = () => {
                           className="form-check-label"
                           htmlFor="acceptTerms"
                         >
-                          I agree and accept the <NavLink to="/Home">terms and conditions</NavLink>
+                          I agree and accept the <NavLink to="/">terms and conditions</NavLink>
                         </label>
                       </div>
                     </div>
@@ -102,7 +102,7 @@ const Register = () => {
                     <div className="col-12">
                       <p className="small mb-0">
                         Already have an account?
-                        <NavLink to="/login"> Login</NavLink>
+                        <NavLink to="/"> Login</NavLink>
                       </p>
                     </div>
                   </form>
@@ -111,7 +111,7 @@ const Register = () => {
               {/* card ends */}
               <div className="credits">
                 Designed by
-                <a href="/Home"> Logicare</a>
+                <a href="/"> Logicare</a>
               </div>
             </div>
           </div>

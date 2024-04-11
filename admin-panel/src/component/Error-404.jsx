@@ -1,4 +1,5 @@
 import React from "react";
+import "./error.css";
 import notFound from "../images/not-found.svg";
 import { NavLink } from "react-router-dom";
 

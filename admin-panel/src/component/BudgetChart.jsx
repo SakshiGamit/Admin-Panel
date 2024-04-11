@@ -23,7 +23,7 @@ function BudgetChart() {
             max: 30000,
           },
           {
-            name: "CS",
+            name: "Service",
             max: 38000,
           },
           {

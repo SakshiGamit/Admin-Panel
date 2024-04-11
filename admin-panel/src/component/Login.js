@@ -94,7 +94,7 @@ const Login = () => {
               {/* card ends */}
               <div className="credits">
                 Designed by
-                <a href="/Home"> LogiCare</a>
+                <a href="/"> LogiCare</a>
               </div>
             </div>
           </div>

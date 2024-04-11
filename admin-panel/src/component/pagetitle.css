@@ -4,13 +4,13 @@
 .pagetitle h1{
     font-size: 24px;
     margin-bottom: 0;
-   font-weight: 600;
+   font-weight: 600;  
     color: var(--primary);
-    font-family: "Nunito";
+    font-family: "Nunito", sans-serif;
 }
 .breadcrumb{
     font-size: 14px;
-    font-family: "Nunito";
+    font-family: "Nunito", sans-serif;
 }
 .breadcrumb a{
     color: #899bbd;
@@ -18,5 +18,5 @@
 }
 .breadcrumb .active{
     color: #51678f;
-    font-weight: bolder;
+    font-weight: 600;
 }

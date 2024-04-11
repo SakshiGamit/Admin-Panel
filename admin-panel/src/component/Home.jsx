@@ -1,14 +1,14 @@
 import React from "react";
-import Navbar from "./Navbar"
-import Main from "./Main";
+import Navbar from "./Navbar";
 import Footer from "./Footer";
 import BackToTop from "./BackToTop";
+import DashboardMain from "./DashboardMain";
 
 const Home = () => {
   return (
     <>
     <Navbar />
-    <Main />
+    <DashboardMain />
     <Footer />
     <BackToTop />
     </> 

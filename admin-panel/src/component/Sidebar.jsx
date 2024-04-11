@@ -1,18 +1,23 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "./sidebar.css";
 import SidebarItem from "../data/SidebarItem";
 
 const Sidebar = () => {
+  const location = useLocation();
   const routeMap = {
     Register: "/register",
-    Login: "/login",
+    Login: "/",
+    Profile:"/profile",
+    Contact:"/contact",
+    FAQ: "/faq",
   };
   return (
     <>
       <aside id="sidebar" className="sidebar">
         <ul className="sidebar-nav" id="sidebar-nav">
           <li className="nav-item">
-            <NavLink className="nav-link" to="/*">
+            <NavLink className={`nav-link ${location.pathname === "/Home" ? "" : "collapsed"}`}
+            to="/Home">
               <i className="bi bi-grid"></i>
               <span>Dashboard</span>
             </NavLink>
@@ -26,7 +31,7 @@ const Sidebar = () => {
               data-bs-toggle="collapse"
             >
               <i className="bi bi-journal-text"></i>
-              <span>Customer</span>
+              <span>Customers</span>
               <i className="bi bi-chevron-down ms-auto"></i>
             </NavLink>
             <ul
@@ -35,14 +40,57 @@ const Sidebar = () => {
               data-bs-parent="#sidebar-nav"
             >
               <li>
-                <NavLink to="/Home">
+                <NavLink to="/*">
                   <i className="bi bi-circle"></i>
-                  <span>Profile</span>
+                  <span>List of Customer</span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/*">
+                  <i className="bi bi-circle"></i>
+                  <span>Create Customer</span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/*">
+                  <i className="bi bi-circle"></i>
+                  <span>Customer details</span>
                 </NavLink>
               </li>
             </ul>
           </li>
-          {/* End Forms Nav */}
+          {/* End Customer Nav */}
+          <li className="nav-item">
+            <NavLink
+              className="nav-link collapsed"
+              to="/Home"
+              data-bs-target="#charts-nav"
+              data-bs-toggle="collapse"
+            >
+              <i className="bi bi-bar-chart"></i>
+              <span>Product</span>
+              <i className="bi bi-chevron-down ms-auto"></i>
+            </NavLink>
+            <ul
+              id="charts-nav"
+              className="nav-content collapse"
+              data-bs-parent="#sidebar-nav"
+            >
+              <li>
+                <NavLink to="/*">
+                  <i className="bi bi-circle"></i>
+                  <span>List of Product</span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/*">
+                  <i className="bi bi-circle"></i>
+                  <span>Product details</span>
+                </NavLink>
+              </li>
+            </ul>
+          </li>
+          {/* End Product Nav */}
           <li className="nav-item">
             <NavLink
               className="nav-link collapsed"
@@ -73,55 +121,19 @@ const Sidebar = () => {
               </li>
             </ul>
           </li>
-          {/* End Tables Nav */}
-          <li className="nav-item">
-            <NavLink
-              className="nav-link collapsed"
-              to="/Home"
-              data-bs-target="#charts-nav"
-              data-bs-toggle="collapse"
-            >
-              <i className="bi bi-bar-chart"></i>
-              <span>Reports</span>
-              <i className="bi bi-chevron-down ms-auto"></i>
-            </NavLink>
-            <ul
-              id="charts-nav"
-              className="nav-content collapse"
-              data-bs-parent="#sidebar-nav"
-            >
-              <li>
-                <NavLink to="/report">
-                  <i className="bi bi-circle"></i>
-                  <span>Report Chart</span>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/budgetreport">
-                  <i className="bi bi-circle"></i>
-                  <span>Budget Chart</span>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/webtraffic">
-                  <i className="bi bi-circle"></i>
-                  <span>Website Traffic Chart</span>
-                </NavLink>
-              </li>
-            </ul>
-          </li>
-          {/* End Charts Nav */}
-          <li className="nav-heading">Pages</li>
+          {/* End Sales Nav */}
+          <li className="nav-heading">General</li>
 
           {SidebarItem.map((nav) => {
             const toRoute = routeMap[nav.name] || "*";
             return (
               <li className="nav-item" key={nav.id}>
-                <NavLink to={toRoute} className="nav-link collapsed">
+                <NavLink to={toRoute} className={`nav-link ${location.pathname === toRoute ? "" : "collapsed"}`}>
                   <i className={nav.icon}></i>
                   <span>{nav.name}</span>
                 </NavLink>
               </li>
+              
             );
           })}
         </ul>

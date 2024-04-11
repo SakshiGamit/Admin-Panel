@@ -1,0 +1,38 @@
+.contact .info-box {
+  padding: 28px 30px;
+}
+.contact .info-box i {
+  font-size: 38px;
+  line-height: 0;
+  color: var(--secondary);
+}
+.contact .info-box h3 {
+  font-size: 20px;
+  color: var(--primary);
+  font-weight: 700;
+  margin: 20px 0 10px 0;
+}
+.contact .info-box p {
+  padding: 0;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.contact .email-form input {
+  padding: 10px 15px;
+}
+
+.contact .email-form textarea {
+  padding: 12px 15px;
+}
+.contact .email-form button[type="submit"] {
+  background: #4154f1;
+  border: 0;
+  padding: 10px 30px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+.contact .email-form button[type="submit"]:hover {
+  background: #5969f3;
+}
