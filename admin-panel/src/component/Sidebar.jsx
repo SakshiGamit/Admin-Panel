@@ -40,13 +40,13 @@ const Sidebar = () => {
               data-bs-parent="#sidebar-nav"
             >
               <li>
-                <NavLink to="/*">
+                <NavLink to="/customers">
                   <i className="bi bi-circle"></i>
                   <span>List of Customer</span>
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/*">
+                <NavLink to="/createcustomer">
                   <i className="bi bi-circle"></i>
                   <span>Create Customer</span>
                 </NavLink>
@@ -77,7 +77,7 @@ const Sidebar = () => {
               data-bs-parent="#sidebar-nav"
             >
               <li>
-                <NavLink to="/*">
+                <NavLink to="/products">
                   <i className="bi bi-circle"></i>
                   <span>List of Product</span>
                 </NavLink>

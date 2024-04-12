@@ -7,7 +7,7 @@ function BackToTop() {
   };
 
   const listenToScroll = () => {
-    let NotVisisbleAt = 250;
+    let NotVisisbleAt = 150;
     const scrolled =
       document.body.scrollTop || document.documentElement.scrollTop;
 
