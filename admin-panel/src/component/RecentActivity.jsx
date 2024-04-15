@@ -11,7 +11,7 @@ function RecentActivity() {
   };
 
   const fetchData = () => {
-    fetch("http://localhost:4000/recentactiviy")
+    fetch("https://fish-laser-gardenia.glitch.me/recentactiviy")
       .then((res) => res.json())
       .then((data) => {
         setItems(data);

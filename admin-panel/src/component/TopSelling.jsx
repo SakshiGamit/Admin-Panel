@@ -10,7 +10,7 @@ function TopSelling() {
   };
 
   const fetchData = () => {
-    fetch("http://localhost:4000/topselling")
+    fetch("https://fish-laser-gardenia.glitch.me/topselling")
       .then((res) => res.json())
       .then((data) => {
         setItems(data);

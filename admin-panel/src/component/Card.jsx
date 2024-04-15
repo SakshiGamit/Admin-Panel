@@ -5,7 +5,7 @@ function Card() {
   const [cards, setCards] = useState([]);
 
   const fetchData = () => {
-    fetch("http://localhost:4000/cards")
+    fetch("https://fish-laser-gardenia.glitch.me/cards")
       .then((res) => res.json())
       .then((data) => {
         setCards(data);
