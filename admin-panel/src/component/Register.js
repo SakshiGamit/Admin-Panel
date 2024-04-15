@@ -16,7 +16,7 @@ const Register = () => {
                   <figure className="m-0">
                     <img src={require("../images/logo.png")} alt="logo"></img>
                   </figure>
-                  <span className="d-none d-lg-block">Logicare</span>
+                  <span className="d-none d-lg-block">Astoria</span>
                 </NavLink>
               </div>
               {/* logo end */}
@@ -111,7 +111,7 @@ const Register = () => {
               {/* card ends */}
               <div className="credits">
                 Designed by
-                <a href="/"> Logicare</a>
+                <a href="/"> Astoria</a>
               </div>
             </div>
           </div>

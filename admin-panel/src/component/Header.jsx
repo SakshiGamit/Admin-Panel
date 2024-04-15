@@ -28,7 +28,7 @@ const Header = () => {
             <figure className="m-0">
               <img src={require("../images/logo.png")} alt="logo"></img>
             </figure>
-            <span className="d-none d-lg-block">LogiCare</span>
+            <span className="d-none d-lg-block">Astoria</span>
           </NavLink>
           <button className="btn p-0" onClick={handleToggleSidebar}>
             <i className="bi bi-list toggle-sidebar-btn"></i>

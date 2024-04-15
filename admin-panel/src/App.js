@@ -8,7 +8,7 @@ import Profile from "./component/Profile";
 import Contact from "./component/Contact";
 import FAQ from "./component/FAQ";
 import CustomerList from "./component/CustomerList";
-import CreateCustomer from "./component/CreateCustomer";
+// import CreateCustomer from "./component/CreateCustomer";
 import ProductList from "./component/ProductList";
 
 function App() {
@@ -21,7 +21,6 @@ function App() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/faq" element={<FAQ />} />
       <Route path="/customers" element={<CustomerList />} />
-      <Route path="/createcustomer" element={<CreateCustomer />} />
       <Route path="/products" element={<ProductList />} />
       <Route path="*" element={<Error />} />
       

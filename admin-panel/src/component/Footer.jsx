@@ -7,7 +7,7 @@ function Footer() {
       <div className="copyRight">
         &copy; Copyright{" "}
         <strong>
-          <span>LogiCare</span>
+          <span>Astoria</span>
         </strong>
         . All Rights Reserved
         <div className="credits">

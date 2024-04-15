@@ -16,7 +16,7 @@ const Login = () => {
                   <figure className="m-0">
                     <img src={require("../images/logo.png")} alt="logo"></img>
                   </figure>
-                  <span className="d-none d-lg-block">LogiCare</span>
+                  <span className="d-none d-lg-block">Astoria</span>
                 </NavLink>
               </div>
               {/* logo end */}
@@ -94,7 +94,7 @@ const Login = () => {
               {/* card ends */}
               <div className="credits">
                 Designed by
-                <a href="/"> LogiCare</a>
+                <a href="/"> Astoria</a>
               </div>
             </div>
           </div>

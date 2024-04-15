@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { Box } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import BackToTop from "./BackToTop";
@@ -9,11 +10,12 @@ import Pagetitle from "./Pagetitle";
 
 
 function List({ columns , rows, getRowHeight}) {
+  const location = useLocation();
   return (
     <div className="vh-100">
       <main id="main">
         <Navbar />
-        <Pagetitle page="Customers" />
+        <Pagetitle page={`${location.pathname === "/customers" ? "Customers" : "Products"}`} />
         <section className="section">
           <div className="card">
             <div className="card-body pt-4 d-flex flex-column align-items-center">
